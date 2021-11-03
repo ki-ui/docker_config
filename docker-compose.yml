@@ -1,0 +1,15 @@
+version: '3'
+services:
+  notebook:
+    image: ds_image:mine
+    container_name: ds_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      -  C:\Users\Owner\git:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token=''
