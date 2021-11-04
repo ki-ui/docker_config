@@ -11,5 +11,5 @@ services:
     environment:
       - JUPYTER_ENABLE_LAB=yes
     volumes:
-      -  C:\Users\Owner\git:/home/jovyan/work
+      -  C:\Users\Owner\git:/home/jovyan
     command: start-notebook.sh --NotebookApp.token=''
